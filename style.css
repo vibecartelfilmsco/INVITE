@@ -18,7 +18,8 @@
   min-height: auto;        /* removes forced full screen */
   padding: 40px 20px;
 }
-
+.section {
+  position: relative; /* REQUIRED for scroll hint */
 }
 
 /* universal h1 heading color for visibility */
@@ -92,8 +93,9 @@ h2,
   bottom: 25px;
   width: 28px;
   height: 45px;
-  border: 2px solid rgba(255,255,255,0.7);
+  border: 2px solid #ffd700;
   border-radius: 20px;
+  opacity: 0.85;
 }
 
 .scroll-hint::before {
@@ -102,11 +104,11 @@ h2,
   top: 10px;
   left: 50%;
   width: 4px;
-  height: 8px;
-  background: rgba(255,255,255,0.7);
+  height: 10px;
+  background: #ffd700;
   border-radius: 4px;
   transform: translateX(-50%);
-  animation: scrollDot 1.6s infinite;
+  animation: scrollDot 1.6s infinite ease-in-out;
 }
 
 @keyframes scrollDot {
@@ -233,6 +235,7 @@ body::after {
     padding-top: 50px;
 
 }
+
 
 
 
