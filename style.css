@@ -1,12 +1,13 @@
 /* full screen scroll sections */
 .section {
-  min-height: 85vh;
+  min-height: 85vh;        /* was 100vh */
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px 20px;
+  padding: 30px 20px;      /* was 60px 20px */
   transition: background-image 1.5s ease;
 }
+
 
 /* make section backgrounds transparent so gradient is visible */
 .section-1,
@@ -14,6 +15,10 @@
 .section-3,
 .section-4 {
   background: transparent;
+  min-height: auto;        /* removes forced full screen */
+  padding: 40px 20px;
+}
+
 }
 
 /* universal h1 heading color for visibility */
@@ -201,3 +206,4 @@ body::after {
     padding-top: 50px;
 
 }
+
